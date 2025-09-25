@@ -7,6 +7,7 @@ import LatestProducts from './_components/LatestProducts/LatestProducts';
 import FavouriteProducts from "./_components/FavouriteProducts/FavouriteProducts";
 import BrandsTrusted from "./_components/BrandsTrustedSection/BrandsTrusted";
 import Subscribe from "./_components/Subscribe/Subscribe";
+import Footer from './_components/Footer/Footer';
 
 
 export default async function Home() {
@@ -22,6 +23,7 @@ export default async function Home() {
 <FavouriteProducts/>
 <BrandsTrusted/>
 <Subscribe/>
+<Footer/>
 </>
   );
 }
