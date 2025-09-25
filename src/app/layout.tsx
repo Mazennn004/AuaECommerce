@@ -47,7 +47,7 @@ export default function RootLayout({
           </CartContextProvider>
        
         </MySessionProvider>
-        <Footer/>
+        
       </body>
     </html>
   );

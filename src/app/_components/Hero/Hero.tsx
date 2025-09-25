@@ -61,10 +61,10 @@ export default function Hero() {
      <Fade delay={1000}>
           <div className="flex flex-col items-center gap-4 mt-5 font-poppins">
         <button  className="p-5 shadow bg-black text-white font-medium rounded-3xl w-[80%]  ">
-            Shop new Collections
+            <a href="#latest">Shop new Collections</a>
         </button>
          <button className="p-5 shadow bg-slate-200 text-black rounded-3xl w-[80%] font-medium">
-          Explore Bestsellers
+      <a href="#favourite">Explore Bestsellers</a>
         </button>
        </div>
      </Fade>
