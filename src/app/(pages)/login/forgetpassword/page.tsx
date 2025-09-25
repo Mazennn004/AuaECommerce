@@ -59,7 +59,7 @@ export default function ForgetPassword() {
         
     }
   return (
-    <Slide direction="left">
+    <Fade direction="left">
         <form onSubmit={handleSubmit(sendOTP)} className="min-h-[400px]">
       <header className="font-poppins text-start">
         <h1 className="text-2xl font-bold">Enter your email</h1>
@@ -76,6 +76,6 @@ export default function ForgetPassword() {
 
    <div className="flex justify-center hover:underline cursor-pointer mt-2 text-main"><Link href={'/login'}>Go back to login</Link></div>
     </form>
-    </Slide>
+    </Fade>
   );
 }

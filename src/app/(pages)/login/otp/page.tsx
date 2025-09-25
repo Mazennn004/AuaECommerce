@@ -13,7 +13,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import z from 'zod'
 import { toast } from 'sonner'
 import { useRouter } from 'next/navigation'
-import { Slide } from 'react-awesome-reveal'
+import { Fade, Slide } from 'react-awesome-reveal'
 
 export default function OTP() {
     const router=useRouter();
@@ -57,7 +57,7 @@ toast(`${err}`,{position:'top-center',className:'!bg-red-500'})
 }
   }  
     return (
-    <Slide direction='left'>
+    <Fade direction='left'>
         <form onSubmit={handleSubmit(resetPassword)} className='flex flex-col gap-4 min-h-[300px] items-center justify-start'>
    <div className='flex flex-col gap-4'>
      <header className="font-poppins text-center">
@@ -93,6 +93,6 @@ toast(`${err}`,{position:'top-center',className:'!bg-red-500'})
    <Button disabled={loading} className='w-full cursor-pointer'>{loading ? <i className='fa-solid fa-spinner fa-spin'></i>: 'Confirm'}</Button>
    <div className="flex justify-center hover:underline cursor-pointer mt-2 text-main"><Link href={'/login'}>Go back to login</Link></div>
     </form>
-    </Slide>
+    </Fade>
   )
 }
