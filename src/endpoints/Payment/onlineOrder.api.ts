@@ -9,11 +9,11 @@ type Address={
         city:string,
     }
 }
-export async function createOnlineOrder(cartId:string,address:Address,url=`https://aura-e-commerce.vercel.app/`){
+export async function createOnlineOrder(cartId:string,address:Address,url=`${process.env.NEXTAUTH_URL}`){
 const accessToken=await getMyToken();
 try{
 if(accessToken){
-    const response=await fetch(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=${url}`,
+    const response=await fetch(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=https://aura-e-commerce.vercel.app`,
         {
         method:'POST',
         headers:{
