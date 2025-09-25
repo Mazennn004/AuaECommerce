@@ -9,7 +9,7 @@ type Address={
         city:string,
     }
 }
-export async function createOnlineOrder(cartId:string,address:Address,url=process.env.NEXTAUTH_URL){
+export async function createOnlineOrder(cartId:string,address:Address,url=`https://aura-e-commerce.vercel.app/`){
 const accessToken=await getMyToken();
 try{
 if(accessToken){
