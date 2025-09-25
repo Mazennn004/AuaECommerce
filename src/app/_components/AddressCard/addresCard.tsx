@@ -9,7 +9,6 @@ export default function AddresCard({address,array,set}:{address:AddressCard,arra
   async function handleRemove(){
     try{
       const payload=await removeAddress(address._id);
-      console.log(payload);
       
       if(payload.status='success'){
 set(payload.data);
