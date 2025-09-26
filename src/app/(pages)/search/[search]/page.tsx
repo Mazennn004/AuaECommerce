@@ -25,7 +25,7 @@ export default async function SearchOutput({
   return (
     <>
     <header className="font-poppins text-center p-5">
-     <h1 className="font-bold lg:text-4xl text-2xl text-black">Search results for '{search}'</h1>
+     <h1 className="font-bold lg:text-4xl text-2xl text-black"> Search results for &rsquo;{search}&rsquo; </h1>
           </header>
     <ProductLayout data={result} products={products}/>
     </>
