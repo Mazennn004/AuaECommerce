@@ -12,8 +12,8 @@ const data=products.data;
     <Fade delay={500} duration={800}>
         <section id='latest' className=' bg-slate-50 p-7'>
       <header className='p-10 font-poppins text-center'>
-        <h3 className='text-4xl font-bold'>Fresh off the Line</h3>
-        <p className='text-slate-400 text-md'>Discover the latest Additions to the Aura collecation</p>
+        <h3 className='lg:text-4xl text-2xl font-bold'>Fresh off the Line</h3>
+        <p className='text-slate-400 text-sm lg:text-md'>Discover the latest Additions to the Aura collecation</p>
       </header>
       
       <div className='flex flex-wrap p-5'>

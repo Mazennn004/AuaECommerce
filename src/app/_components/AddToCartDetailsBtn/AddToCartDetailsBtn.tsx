@@ -4,6 +4,7 @@ import { ICart } from "@/app/interfaces/cart.interface";
 import { Button } from "@/components/ui/button";
 import addToCart from "@/endpoints/CartActions/AddtoCart";
 import deleteProduct from "@/endpoints/CartActions/deleteProduct.api";
+import { useRouter } from "next/navigation";
 import React, { useContext, useState, useEffect } from "react";
 import { toast } from "sonner";
 
@@ -11,6 +12,7 @@ export default function AddToCartDetailsBtn({ pid }: { pid: string }) {
   const { cartCount, setCartCount } = useContext(cartContext);
   const [loading, setLoading] = useState<boolean>(false);
   const [isAdded, setIsAdded] = useState<boolean>();
+  const router=useRouter();
   async function handleAddToCart() {
     setLoading(true);
     try {
@@ -37,6 +39,7 @@ export default function AddToCartDetailsBtn({ pid }: { pid: string }) {
           }
       } else {
         setLoading(false);
+        router.push('/login');
         toast(`${response.message || "Login in order to add to cart"}`, {
           position: "top-right",
           icon: (

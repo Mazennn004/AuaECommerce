@@ -3,7 +3,6 @@ import React from "react";
 import { Product } from "./../../../interfaces/product.interface";
 import { ProductsResponse } from "./../../../interfaces/allproducts.interface";
 import  ProductLayout  from '@/app/_components/ProductsLayout/ProductLayout';
-
 export default async function SearchOutput({
   params,
 }: {
@@ -25,7 +24,10 @@ export default async function SearchOutput({
   });
   return (
     <>
-    ,<ProductLayout data={result} products={products}/>
+    <header className="font-poppins text-center p-5">
+     <h1 className="font-bold lg:text-4xl text-2xl text-black">Search results for '{search}'</h1>
+          </header>
+    <ProductLayout data={result} products={products}/>
     </>
   );
 }

@@ -4,11 +4,12 @@ import { CartProduct, ICart } from "@/app/interfaces/cart.interface";
 import addToCart from "@/endpoints/CartActions/AddtoCart";
 import deleteProduct from "@/endpoints/CartActions/deleteProduct.api";
 import getMyToken from "@/utilities/GetMyToken";
+import { useRouter } from "next/navigation";
 import React, { useContext, useEffect, useState } from "react";
-import { Fade } from "react-awesome-reveal";
 import { toast } from "sonner";
 
 export default function AddToCartBn({ pid }: { pid: string }) {
+  const router=useRouter();
   const[loading,setLoading]=useState<boolean>(false);
   const[isAdded,setisAdded]=useState<boolean>(false);
   const {
@@ -41,7 +42,8 @@ export default function AddToCartBn({ pid }: { pid: string }) {
           }
     } else {
       setLoading(false)
-      toast(`${response.message || "Login in order to add to cart"}`, {
+      router.push(`login`);
+      toast(`${response || "Login in order to add to cart"}`, {
         position: "top-right",
         icon: <i className="fa-solid fa-xmark !text-red-900 !text-lg me-2"></i>,
         className: "!bg-red-500",

@@ -69,11 +69,7 @@ export default function Checkout() {
     } else {
       try {
         const payload = await createOnlineOrder(cartId, userAddress, "");
-        console.log(payload);
-
         if (payload.status === "success") {
-          console.log(payload);
-
           localStorage.setItem("cart", "[]");
           setCartCount(0);
           window.location.href = `${payload?.session.url}`;
@@ -143,7 +139,7 @@ export default function Checkout() {
                 <span className="font-poppins font-bold text-md">
                   Cash On Deliveiry (COD)
                 </span>
-                <span className="text-slate-400 block">4-6 Business days</span>
+                <span className="text-slate-400 block">Pay Cash to our Deliveiry Hero</span>
               </label>
               <label
                 htmlFor="online"
@@ -152,7 +148,7 @@ export default function Checkout() {
                 <span className="font-poppins font-bold text-md">
                   Credit Card
                 </span>
-                <span className="text-slate-400 block">4-10 Business days</span>
+                <span className="text-slate-400 block">Visa/Master Card/Apple Pay</span>
               </label>
             </div>
           </div>

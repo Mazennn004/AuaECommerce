@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 export default function Subscribe() {
   return (
    <Fade direction={'up'}>
-     <section className="lg:p-5 p-2 flex justify-center items-center w-full">
+     <section className="lg:p-7 p-5 flex justify-center items-center w-full">
       <div className="lg:w-[70%] bg-[linear-gradient(90deg,#1a103d_0%,#3b1a5c_50%,#24184a_100%)] p-16 rounded-xl flex justify-center items-center">
         <div className="text-white font-poppins text-center">
             <h6 className="text-3xl font-medium ">Join Our inner Circle</h6>

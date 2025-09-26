@@ -33,8 +33,8 @@ export default function AddressSettings() {
 
   return (
     <div className='container mx-auto lg:p-3 rounded-xl'>
-      <div className='flex justify-between p-5'>
-        <span className='font-bold text-md lg:text-lg'>Addresses</span>
+      <div className='flex justify-between p-2 lg:p-5'>
+        <span className='font-bold text-lg'>Addresses</span>
     <AddAddressDialogue set={setAddresses}/>
       </div>
       <div className="flex flex-col gap-3">

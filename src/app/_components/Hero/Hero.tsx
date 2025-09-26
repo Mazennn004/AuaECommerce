@@ -45,7 +45,7 @@ export default function Hero() {
     {/*Mobile screen*/}
    <header className="lg:hidden min-h-screen flex justify-center flex-col bg-img ">
     <div className=" heading text-center  mt-[100px]">
-          <h1 className="text-[60px] font-bold">
+          <h1 className="lg:text-[60px] text-5xl font-bold  ">
              Timeless Style,
             
             <Fade duration={2000}>

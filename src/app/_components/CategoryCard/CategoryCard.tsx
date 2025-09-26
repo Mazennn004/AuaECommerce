@@ -7,7 +7,7 @@ export default function CategoryCard({category}:{category:Icategory}) {
    
     
   return (
-       <div className='category-card '>
+       <div className='category-card'>
          <Link href={`/categories/${category._id}`}className="inner">
                <figure className='rounded-lg lg:h-[400px] h-[100px]'>
                 <Image src={category.image} alt='category-image' className='rounded-lg w-full h-full object-cover' width={300} height={100}/>

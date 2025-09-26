@@ -56,8 +56,6 @@ export default function Password() {
       const payload = await changeUserPassword(obj);
 
       if (payload?.message === "success") {
-
-        
         const res = await signIn("credentials", {
           email: session?.user.email,
           password: obj.password,
@@ -66,7 +64,7 @@ export default function Password() {
         });
         if (res?.ok) {
           setLoading(false);
-          window.location.href='/';
+          window.location.href = "/";
           toast(`Password updated successfully`, {
             position: "top-right",
             className: "!bg-emerald-500",

@@ -17,7 +17,7 @@ export default function ProductCard({product}:{product:Product}) {
           </Link>
           <div className='labels font-poppins flex justify-between mt-5'>
            <Link href={`/pDetails/${product._id}`} className='flex flex-col'>
-             <span className='text-xl font-bold'>{product.title}</span>
+             <span className='text-xl font-bold'>{product.title.split(' ',5).join(' ')}</span>
              <span className='text-md text-slate-400'>{product.subcategory[0].name}</span>
            </Link>
             <div className='interactions flex gap-3'>

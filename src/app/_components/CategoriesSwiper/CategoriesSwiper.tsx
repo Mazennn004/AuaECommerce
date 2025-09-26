@@ -11,9 +11,9 @@ export default function CategoriesSwiper({categories}:{categories:Icategory[]}) 
 
     return (
     <section className='bg-white lg:p-[60px]'>
-      <header className='p-[50px] flex text-center flex-col font-poppins'>
-        <h2 className='font-bold text-4xl'>Shop By Categories</h2>
-        <p className='text-slate-500 text-md mt-4'>Curated collections for every aspect of your life</p>
+      <header className='p-[50px]  flex text-center flex-col font-poppins'>
+        <h2 className='font-bold lg:text-4xl text-2xl'>Shop By Categories</h2>
+        <p className='text-slate-500 text-sm lg:text-md mt-4'>Curated collections for every aspect of your life</p>
       </header>
    
     <Swiper 

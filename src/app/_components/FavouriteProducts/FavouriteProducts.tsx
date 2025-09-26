@@ -12,8 +12,8 @@ export default async function FavouriteProducts() {
     <Fade delay={500} duration={800}>
             <section id='favourite' className=' bg-slate-50 p-7'>
           <header className='p-10 font-poppins text-center'>
-            <h3 className='text-4xl font-bold'>Community Favourites</h3>
-            <p className='text-slate-400 text-md'>Tried, Tested and loved, see wht everybody is talking about</p>
+            <h3 className='lg:text-4xl text-xl font-bold'>Community Favourites</h3>
+            <p className='text-slate-400 text-sm lg:text-md'>Tried, Tested and loved, see wht everybody is talking about</p>
           </header>
           
           <div className='flex flex-wrap p-5'>
