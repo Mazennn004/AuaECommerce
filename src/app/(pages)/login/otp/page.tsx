@@ -57,7 +57,7 @@ toast(`${err}`,{position:'top-center',className:'!bg-red-500'})
 }
   }  
     return (
-    <Fade direction='left'>
+    <Fade>
         <form onSubmit={handleSubmit(resetPassword)} className='flex flex-col gap-4 min-h-[300px] items-center justify-start'>
    <div className='flex flex-col gap-4'>
      <header className="font-poppins text-center">

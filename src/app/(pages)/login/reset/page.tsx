@@ -7,6 +7,7 @@ import z from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useRouter } from 'next/navigation';
 import { toast } from 'sonner';
+import { Fade } from 'react-awesome-reveal';
 
 export default function ResetPassword() {
     const[loading,setLoading]=useState<boolean>()
@@ -56,10 +57,11 @@ export default function ResetPassword() {
         
     }
   return (
-    <form onSubmit={handleSubmit(confirmChange)} className='min-h-[300px] flex flex-col gap-3 p-5'>
+    <Fade>
+      <form onSubmit={handleSubmit(confirmChange)} className='min-h-[300px] flex flex-col gap-3 p-5'>
        <header className="font-poppins text-start">
-        <h1 className="text-2xl font-bold">Reset your Password</h1>
-        <p className="text-slate-400 mt-1 text-md">You will be directed to login page again to sign in with your new password</p>
+        <h1 className="lg:text-2xl text-md font-bold">Reset your Password</h1>
+        <p className="text-slate-400 mt-1 text-sm lg:text-md">You will be directed to login page again to sign in with your new password</p>
       </header>
         <div className='flex flex-col gap-1'>
             <label htmlFor="passowrd"> New Password</label>
@@ -77,5 +79,6 @@ export default function ResetPassword() {
         </div>
       <Button className='cursor-pointer'>{loading ? <i className='fas fa-spinner fa-spin'></i>:'Change Password'}</Button>
     </form>
+    </Fade>
   )
 }
