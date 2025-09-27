@@ -42,7 +42,7 @@ export default function AddToCartBn({ pid }: { pid: string }) {
           }
     } else {
       setLoading(false)
-      router.push(`login`);
+      router.push(`/login`);
       toast(`${response || "Login in order to add to cart"}`, {
         position: "top-right",
         icon: <i className="fa-solid fa-xmark !text-red-900 !text-lg me-2"></i>,
